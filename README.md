@@ -4,8 +4,8 @@ library(plyr)
 library(dplyr)
 
 base_5ano <- read.csv2("base final_5ano.csv")
-base_teste <- base_5ano %>% filter(!is.na(PROFICIENCIA_LP) & !is.na(PROFICIENCIA_MT)) %>% 
-                           select("PROFICIENCIA_LP", "PROFICIENCIA_MT", "ID_LOCALIZACAO", "q1", "q2",                                     "q17", "q20", "distancia")
+base_teste <- base_5ano %>% filter(!is.na(PROFICIENCIA_LP) & !is.na(PROFICIENCIA_MT)) %>% select("PROFICIENCIA_LP", "PROFICIENCIA_MT", "ID_LOCALIZACAO", "q1", "q2","q17", "q20", "distancia")
+
 base_teste <- round(base_teste$PROFICIENCIA_LP, 4)
 base_teste <- round(base_teste$PROFICIENCIA_MT, 4)
 
